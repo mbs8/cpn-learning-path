@@ -1,11 +1,17 @@
 [
   {
-    "task": "Write a regular expression to validate AWS S3 bucket names. S3 bucket names must be 3-63 characters long, contain only lowercase letters, numbers, hyphens, and periods, start and end with a letter or number, and cannot contain consecutive hyphens or periods."
+    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message using a regular expression",
+    "format": "regex",
+    "solution_criteria": "The regex must correctly capture three groups: timestamp (ISO 8601 format), log level (ERROR, WARN, INFO, DEBUG), and the remaining message text. Example input: '2024-01-15T10:30:45Z ERROR Failed to connect to RDS instance'"
   },
   {
-    "task": "Write a Python function that takes an AWS CloudWatch log stream name and returns a dictionary with the log group name and stream name separated. For example, 'my-app-logs/lambda/2024-01-15' should return {'log_group': 'my-app-logs/lambda', 'stream_name': '2024-01-15'}."
+    "task": "Write a Python function that takes an AWS S3 bucket name and returns a valid S3 URI in the format 's3://bucket-name'",
+    "format": "python",
+    "solution_criteria": "Function must accept a bucket name string, validate that it's not empty, and return a properly formatted S3 URI. Should handle edge cases like leading/trailing whitespace and return the correct format."
   },
   {
-    "task": "Generate a JSON object representing an AWS IAM policy that allows read-only access to all objects in an S3 bucket named 'company-data'. The policy should grant s3:GetObject and s3:ListBucket permissions for only that bucket."
+    "task": "Create a JSON CloudFormation parameter definition for an EC2 instance type that restricts values to only t2.micro, t2.small, and t3.micro",
+    "format": "json",
+    "solution_criteria": "The JSON must define a valid CloudFormation parameter with Type, AllowedValues constraint containing exactly the three specified instance types, and an appropriate Description property."
   }
 ]
