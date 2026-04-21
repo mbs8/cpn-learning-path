@@ -1,4 +1,4 @@
-# Anthropic Course
+# Anthropic Learning Path
 This repository is a sandbox for the [Claude Partner Network Learning Path](https://anthropic.skilljar.com/page/claude-partner-network-learning-path).
 
 ## Courses
