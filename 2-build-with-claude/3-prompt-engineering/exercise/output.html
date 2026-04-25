@@ -145,30 +145,31 @@
                 <td class="criteria">• Extracts all major topics without duplicates or near-synonyms grouped as separate entries<br>• Correctly disambiguates overlapping concepts (e.g., distinguishes 'free will' from 'moral responsibility' and 'neural mechanisms' from 'consciousness')<br>• Returns results as a valid JSON array of strings</td>
                 <td class="output"><pre>```json
 [
-"neurophilosophy",
-"consciousness",
-"moral agency",
-"neuroimaging",
-"decision-making",
-"unconscious neural processes",
-"free will",
-"personal responsibility",
-"mirror neurons",
-"empathic responses",
-"ethical reasoning",
-"embodied neural mechanisms",
-"rational principles",
-"neuroscientific determinism",
-"ethical frameworks",
-"autonomous agents",
-"moral choice",
-"neural plasticity",
-"social cognition",
-"normative ethics"
+  "neurophilosophy",
+  "consciousness",
+  "moral agency",
+  "neuroimaging",
+  "decision-making",
+  "unconscious neural processes",
+  "conscious awareness",
+  "free will",
+  "personal responsibility",
+  "mirror neurons",
+  "empathic responses",
+  "ethical reasoning",
+  "embodied neural mechanisms",
+  "rational principles",
+  "neuroscientific determinism",
+  "ethical frameworks",
+  "autonomous agents",
+  "moral choice",
+  "neural plasticity",
+  "social cognition",
+  "normative ethics"
 ]
 ```</pre></td>
-                <td class="score-col"><span class="score score-high">9</span></td>
-                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. Regarding secondary criteria, it successfully extracts all major topics without duplicates and appropriately disambiguates overlapping concepts like free will, moral responsibility, and consciousness. The extraction is thorough and well-organized. The only minor issue is the inclusion of 'rational principles' as a standalone topic when it functions more as a supporting concept in the text ('abstract rational principles' is mentioned in contrast to embodied mechanisms). This is a very minor concern that does not significantly impact the overall quality of the extraction.</td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. Regarding secondary criteria, the solution successfully extracts all major topics and disambiguates most overlapping concepts effectively. However, there are minor issues with near-synonymous entries ('conscious awareness' vs 'consciousness', 'moral choice' vs 'moral agency') that slightly violate the 'without duplicates or near-synonyms grouped as separate entries' criterion. These are not severe violations—the concepts are distinct enough to justify separate entries—but they represent minor redundancy. The solution demonstrates strong understanding of the text and appropriate topic extraction, with only marginal room for improvement in eliminating subtle semantic overlap.</td>
             </tr>
         
             <tr>
@@ -178,28 +179,75 @@
                 <td class="output"><pre>```json
 [
   "Congress of Vienna",
-  "Napoleonic Wars",
   "European political geography",
-  "balance of power",
+  "Napoleon's defeat",
+  "balance of power system",
+  "international relations",
   "Metternich",
+  "conservative ideology",
   "monarchical legitimacy",
   "nationalist movements",
+  "Italy",
+  "German states",
   "Concert of Europe",
   "great power cooperation",
   "liberal reform",
   "reactionary conservatism",
-  "British industrial ascendancy",
+  "nineteenth century",
+  "Britain",
+  "industrial ascendancy",
   "naval supremacy",
   "Austria-Hungary",
+  "declining influence",
   "Russian expansionism",
+  "Eastern Europe",
   "Ottoman Empire",
+  "territorial loss",
   "geopolitical instability",
+  "post-Napoleonic consensus",
   "nationalist revolutions of 1848",
   "great power rivalries"
 ]
 ```</pre></td>
-                <td class="score-col"><span class="score score-high">8</span></td>
-                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings with only topic content, no extra commentary, and contains no duplicates. It successfully extracts a strong mix of proper nouns and thematic concepts as required by the secondary criteria. However, there are minor gaps in comprehensiveness—some geographic regions explicitly mentioned (Italy, German states, Eastern Europe) were not extracted, and 'Napoleonic Wars' is somewhat inferred rather than directly present. These are relatively minor omissions that don't undermine the overall quality of the extraction, which captures the main topics effectively.</td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it contains a valid JSON array of strings with only topic content, no extra commentary, and nothing else in the response. It meets the secondary criteria by extracting both specific proper nouns and abstract thematic concepts, identifying distinct categories of topics (events, ideologies, regions), and maintaining no duplicates. The extraction is thorough and contextually appropriate. Minor weaknesses exist in granularity consistency and some compound concepts that could be more efficiently grouped, but these do not violate any stated criteria and represent only marginal areas for refinement.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a highly technical physics or chemistry paper excerpt using domain-specific jargon to verify accurate topic identification despite specialized terminology</td>
+                <td class="prompt-inputs"><strong>content:</strong> We investigated the photocatalytic degradation of organic pollutants using titanium dioxide nanoparticles synthesized via sol-gel methodology. The anatase phase TiO2 exhibited enhanced photocatalytic activity under UV-A irradiation due to increased surface area and reduced band gap energy. X-ray diffraction analysis confirmed crystallinity with a primary peak at 2θ = 25.3°, while transmission electron microscopy revealed particle sizes between 8-12 nm. The mechanism involves electron-hole pair generation at the semiconductor interface, subsequently producing reactive oxygen species including hydroxyl radicals and superoxide anions that mineralize persistent organic contaminants. Doping with nitrogen heteroatoms further improved visible light absorption by 47% and reduced electron-hole recombination rates through Fermi level modification.</td>
+                <td class="criteria">• Identifies all major scientific topics including materials, characterization techniques, mechanisms, and performance enhancements<br>• Accurately extracts domain-specific terminology as distinct topics despite complex chemical jargon<br>• Returns results as a JSON array of strings with no additional formatting</td>
+                <td class="output"><pre>```json
+[
+  "photocatalytic degradation",
+  "organic pollutants",
+  "titanium dioxide nanoparticles",
+  "sol-gel methodology",
+  "anatase phase",
+  "photocatalytic activity",
+  "UV-A irradiation",
+  "surface area",
+  "band gap energy",
+  "X-ray diffraction analysis",
+  "crystallinity",
+  "transmission electron microscopy",
+  "particle size",
+  "electron-hole pair generation",
+  "semiconductor interface",
+  "reactive oxygen species",
+  "hydroxyl radicals",
+  "superoxide anions",
+  "mineralization",
+  "persistent organic contaminants",
+  "nitrogen doping",
+  "heteroatoms",
+  "visible light absorption",
+  "electron-hole recombination",
+  "Fermi level"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. It meets the secondary criteria by identifying all major scientific topics (materials like TiO2 nanoparticles, characterization techniques like XRD and TEM, mechanisms like electron-hole pair generation, and enhancements like nitrogen doping). The extraction of domain-specific terminology is accurate and comprehensive. The solution is well-organized and complete, with only minor considerations about granularity that do not detract from overall quality.</td>
             </tr>
         
             <tr>
@@ -225,42 +273,7 @@
 ]
 ```</pre></td>
                 <td class="score-col"><span class="score score-high">10</span></td>
-                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the article with no extra commentary, and the response contains only the JSON array. It meets all secondary criteria by extracting both explicitly stated topics (neuroplasticity, cognitive rehabilitation, environmental enrichment, prefrontal cortex, anterior cingulate cortex, behavioral therapy) and implicitly referenced topics (brain reorganization, motor learning, pharmacological intervention, synaptic plasticity, functional recovery, behavioral adaptation). The solution identifies 14 distinct topics, well exceeding the minimum of 6. The topic selections are accurate and well-justified based on the passage content.</td>
-            </tr>
-        
-            <tr>
-                <td>Testing with a highly technical physics or chemistry paper excerpt using domain-specific jargon to verify accurate topic identification despite specialized terminology</td>
-                <td class="prompt-inputs"><strong>content:</strong> We investigated the photocatalytic degradation of organic pollutants using titanium dioxide nanoparticles synthesized via sol-gel methodology. The anatase phase TiO2 exhibited enhanced photocatalytic activity under UV-A irradiation due to increased surface area and reduced band gap energy. X-ray diffraction analysis confirmed crystallinity with a primary peak at 2θ = 25.3°, while transmission electron microscopy revealed particle sizes between 8-12 nm. The mechanism involves electron-hole pair generation at the semiconductor interface, subsequently producing reactive oxygen species including hydroxyl radicals and superoxide anions that mineralize persistent organic contaminants. Doping with nitrogen heteroatoms further improved visible light absorption by 47% and reduced electron-hole recombination rates through Fermi level modification.</td>
-                <td class="criteria">• Identifies all major scientific topics including materials, characterization techniques, mechanisms, and performance enhancements<br>• Accurately extracts domain-specific terminology as distinct topics despite complex chemical jargon<br>• Returns results as a JSON array of strings with no additional formatting</td>
-                <td class="output"><pre>```json
-[
-  "photocatalytic degradation",
-  "organic pollutants",
-  "titanium dioxide nanoparticles",
-  "sol-gel synthesis",
-  "anatase phase TiO2",
-  "UV-A irradiation",
-  "surface area",
-  "band gap energy",
-  "X-ray diffraction analysis",
-  "crystallinity",
-  "transmission electron microscopy",
-  "particle size",
-  "electron-hole pair generation",
-  "semiconductor interface",
-  "reactive oxygen species",
-  "hydroxyl radicals",
-  "superoxide anions",
-  "mineralization",
-  "persistent organic contaminants",
-  "nitrogen doping",
-  "visible light absorption",
-  "electron-hole recombination",
-  "Fermi level modification"
-]
-```</pre></td>
-                <td class="score-col"><span class="score score-high">9</span></td>
-                <td class="reasoning">The solution meets all mandatory requirements: it contains a valid JSON array of strings with topics only (no extra commentary), returns only the JSON array, and includes each major topic mentioned in the article. Against the secondary criteria, it identifies materials (TiO2, nitrogen doping), characterization techniques (XRD, TEM), mechanisms (electron-hole generation, ROS production), and performance enhancements (visible light absorption improvement, recombination reduction). The extraction of domain-specific terminology is accurate and appropriately granular. The minor weaknesses are negligible—the solution captures 23 distinct, relevant topics with only marginal opportunities for improvement in specificity or completeness.</td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it contains a valid JSON array of strings with topics only (no extra commentary), and the response is the JSON array alone. It meets all secondary criteria by extracting both explicitly stated topics (neuroplasticity, cognitive rehabilitation, environmental enrichment, prefrontal cortex, anterior cingulate cortex, behavioral therapy) and implicitly referenced topics (brain reorganization, motor learning, pharmacological intervention, synaptic plasticity, functional recovery, behavioral adaptation). The solution identifies 14 distinct topics, well exceeding the minimum of 6. The extraction is thorough and contextually appropriate. The only minor issue is slight inconsistency in topic granularity, but this does not violate any stated criteria.</td>
             </tr>
         
             </tbody>
