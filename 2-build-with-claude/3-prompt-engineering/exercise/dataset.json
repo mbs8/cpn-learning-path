@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in neurophilosophy have challenged traditional assumptions about consciousness and moral agency. Neuroimaging studies demonstrate that decision-making involves unconscious neural processes occurring milliseconds before conscious awareness, raising questions about the metaphysical foundations of free will and personal responsibility. Furthermore, research on mirror neurons and empathic responses suggests that our capacity for ethical reasoning may be grounded in embodied neural mechanisms rather than abstract rational principles. These findings create a tension between neuroscientific determinism and the ethical frameworks that presume autonomous agents capable of genuine moral choice. Philosophers and neuroscientists increasingly recognize that understanding human behavior requires integrating perspectives on neural plasticity, social cognition, and normative ethics."
+    },
+    "solution_criteria": [
+      "Extracts all major topics without duplicates or near-synonyms grouped as separate entries",
+      "Correctly disambiguates overlapping concepts (e.g., distinguishes 'free will' from 'moral responsibility' and 'neural mechanisms' from 'consciousness')",
+      "Returns results as a valid JSON array of strings"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly into a JSON array of strings\n    ",
+    "scenario": "Testing with a multidisciplinary passage containing overlapping topics from philosophy, neuroscience, and ethics to evaluate topic boundaries and disambiguation"
+  },
+  {
+    "prompt_inputs": {
+      "content": "The Congress of Vienna (1814-1815) fundamentally reshaped European political geography following Napoleon's defeat, establishing a balance of power system that dominated international relations for nearly a century. Metternich's conservative ideology prioritized monarchical legitimacy and suppressed nationalist movements across the continent, particularly in Italy and the German states. The Concert of Europe emerged as a mechanism for great power cooperation, though tensions between liberal reform and reactionary conservatism persisted throughout the nineteenth century. Britain's industrial ascendancy and naval supremacy contrasted sharply with Austria-Hungary's declining influence, while Russian expansionism in Eastern Europe and the Ottoman Empire's gradual territorial loss created ongoing geopolitical instability. These dynamics ultimately contributed to the fragmentation of the post-Napoleonic consensus and set conditions for the nationalist revolutions of 1848 and subsequent great power rivalries."
+    },
+    "solution_criteria": [
+      "Extracts both specific proper nouns (Congress of Vienna, Metternich, Ottoman Empire, etc.) and abstract thematic concepts (balance of power, nationalism, conservatism, geopolitical instability)",
+      "Identifies historical events, political ideologies, and geographic regions as distinct topics",
+      "Returns results as a JSON array of strings with no duplicates"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly into a JSON array of strings\n    ",
+    "scenario": "Testing with a dense historical analysis passage containing proper nouns, events, and thematic concepts to assess extraction of both specific and abstract topics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "We investigated the photocatalytic degradation of organic pollutants using titanium dioxide nanoparticles synthesized via sol-gel methodology. The anatase phase TiO2 exhibited enhanced photocatalytic activity under UV-A irradiation due to increased surface area and reduced band gap energy. X-ray diffraction analysis confirmed crystallinity with a primary peak at 2\u03b8 = 25.3\u00b0, while transmission electron microscopy revealed particle sizes between 8-12 nm. The mechanism involves electron-hole pair generation at the semiconductor interface, subsequently producing reactive oxygen species including hydroxyl radicals and superoxide anions that mineralize persistent organic contaminants. Doping with nitrogen heteroatoms further improved visible light absorption by 47% and reduced electron-hole recombination rates through Fermi level modification."
+    },
+    "solution_criteria": [
+      "Identifies all major scientific topics including materials, characterization techniques, mechanisms, and performance enhancements",
+      "Accurately extracts domain-specific terminology as distinct topics despite complex chemical jargon",
+      "Returns results as a JSON array of strings with no additional formatting"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly into a JSON array of strings\n    ",
+    "scenario": "Testing with a highly technical physics or chemistry paper excerpt using domain-specific jargon to verify accurate topic identification despite specialized terminology"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in neuroplasticity research have demonstrated that cognitive rehabilitation following traumatic brain injury can be significantly enhanced through targeted environmental enrichment protocols. Studies examining patients with prefrontal cortex damage reveal compensatory activation patterns in the anterior cingulate cortex, suggesting that the brain's inherent reorganization capacity may be leveraged through strategic motor learning exercises. Furthermore, longitudinal data indicates that combined pharmacological intervention with selective serotonin reuptake inhibitors and intensive behavioral therapy produces superior outcomes compared to either modality alone, raising questions about the neurochemical substrates underlying functional recovery and the role of synaptic plasticity in behavioral adaptation."
+    },
+    "solution_criteria": [
+      "Extracts both explicitly stated topics (neuroplasticity, cognitive rehabilitation, environmental enrichment) and implicitly referenced topics inferred from context (brain reorganization, motor learning, pharmacological intervention, synaptic plasticity)",
+      "Returns results as a valid JSON array of strings",
+      "Identifies at least 6 distinct topics from the passage"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly into a JSON array of strings\n    ",
+    "scenario": "Testing with an ambiguous passage where implicit topics must be inferred from context rather than explicitly stated to evaluate the prompt's reasoning capabilities"
+  }
+]
