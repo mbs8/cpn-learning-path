@@ -82,8 +82,5 @@ def format_document(
         base.UserMessage(prompt)
     ]
 
-# TODO: Write a prompt to summarize a doc
-
-
 if __name__ == "__main__":
     mcp.run(transport="stdio")
