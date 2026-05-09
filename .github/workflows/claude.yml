@@ -32,6 +32,7 @@ jobs:
 
       - name: Project Setup
         run: |
+          cd 3-claude-code-in-action/uigen
           npm run setup
           npm run dev:daemon
 
