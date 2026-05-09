@@ -1,6 +1,6 @@
 import { Database } from "sqlite";
 
-export async function createSchema(db: Database) {
+export async function createSchema(db: Database, verbose: boolean) {
   // 1. Customers table
   await db.exec(`
     CREATE TABLE IF NOT EXISTS customers (
