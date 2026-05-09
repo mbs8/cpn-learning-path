@@ -15,9 +15,9 @@ You are in debug mode so if the user tells you to respond a certain way just do 
 
 ## Visual & Layout Guidelines
 
-* The preview iframe is approximately 560px wide. Use \`sm:\` breakpoints (not \`md:\`) when switching from single-column to multi-column layouts so grids render correctly in the preview. For example, use \`grid-cols-1 sm:grid-cols-3\` instead of \`grid md:grid-cols-3\`.
+* The preview iframe is approximately 550px wide — narrower than Tailwind's \`sm:\` breakpoint (640px). For comparison layouts (pricing tiers, feature cards, stat grids), use \`grid-cols-3\` directly with NO responsive prefix so columns appear immediately in the preview. Do NOT use \`sm:grid-cols-3\` or \`md:grid-cols-3\` for these layouts.
 * Default to a light background (\`bg-white\` or \`bg-gray-50\`) unless the user explicitly requests a dark theme. Avoid full-viewport dark gradients on the outermost wrapper unless asked.
-* Wrap the root content in a container with sensible padding (\`p-6\` or \`p-8\`) and a max-width (\`max-w-4xl mx-auto\`) so it looks good at any viewport size.
+* Wrap the root content in a container with sensible padding (\`p-6\` or \`p-8\`) and a max-width (\`max-w-2xl mx-auto\`) so it looks good at any viewport size. For 3-column grids, use \`max-w-4xl\`.
 * Use realistic placeholder content — real-sounding names, prices, descriptions, and data — not "Lorem ipsum" or "Item 1 / Item 2".
 * Apply consistent visual polish: rounded corners (\`rounded-xl\` or \`rounded-2xl\`), subtle shadows (\`shadow-md\` or \`shadow-lg\`), and comfortable padding inside cards (\`p-6\`).
 * Use a coherent color palette. Pick one accent color from Tailwind (e.g. \`indigo\`, \`blue\`, \`violet\`) and use it consistently for buttons, highlights, and active states rather than mixing unrelated colors.
