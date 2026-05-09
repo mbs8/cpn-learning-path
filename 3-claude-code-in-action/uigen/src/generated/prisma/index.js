@@ -134,7 +134,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/matheusb/Projects/Github/cpn-learning-path/3-claude-code-in-action/uigen/src/generated/prisma",
+      "value": "/home/matheus/Projects/Github/cpn-learning-path/3-claude-code-in-action/uigen/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -148,7 +148,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/matheusb/Projects/Github/cpn-learning-path/3-claude-code-in-action/uigen/prisma/schema.prisma",
+    "sourceFilePath": "/home/matheus/Projects/Github/cpn-learning-path/3-claude-code-in-action/uigen/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
