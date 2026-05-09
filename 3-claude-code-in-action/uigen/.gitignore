@@ -2,3 +2,4 @@ CLAUDE.local.md
 node_modules/
 .next/
 prisma/dev.db
+.playwright-mcp/
